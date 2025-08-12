@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nata+Sans:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+
+:root{
+    --color-bento-purple: #7552F2;
+    --color-bento-ivory: #F2E7DC;
+    --color-bento-lila: #D6CEF2;
+    --color-bento-mirabelle-yellow: #F2C063;
+    --color-bento-opaque-white: #F2F2F2;
+    --color-bento-background: #F5F5F5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-bento-background);
+    font-family: "DM Sans", sans-serif;
+}
+
+.container{
+    display: grid;
+    height: 450px;
+    width: 800px;
+    background-color: var(--color-bento-opaque-white);
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "item1 item2 item2 item3"
+    "item1 item2 item2 item3"
+    "item4 item5 item6 item3"
+    "item4 item7 item8 item8";
+    gap: 15px;
+}
+
+
+[class^="item"]{
+    display: flex;
+   /*  border: 1px solid black; */
+    border-radius: 10px;
+}
+
+.item-1{
+    flex-direction: column;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--color-bento-ivory);
+    grid-area: item1;
+    i{
+        color: var(--color-bento-purple);
+    }
+    h1{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    button{
+        width: 95%;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 30px;
+        border: none;
+        background-color: var(--color-bento-mirabelle-yellow);
+        color: #895DA6;
+        font-weight: 700;
+        span{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+        }
+        cursor: pointer;
+    }
+
+}
+
+.item-2{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    background-color: var(--color-bento-purple);
+    grid-area: item2;
+
+    h1{
+        font-size: 30px;
+        span{
+            color: var(--color-bento-mirabelle-yellow);
+        }
+    }
+
+    /* From Uiverse.io by amikambs */ 
+    .rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+    }
+
+    .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    fill: #666;
+    }
+
+    .rating:not(:checked) > label > svg {
+    fill: #666; /* Set default color for SVG */
+    transition: fill 0.3s ease; /* Add a transition effect */
+    }
+
+    .rating > input:checked + label:hover,
+    .rating > input:checked + label:hover ~ label,
+    .rating > input:checked ~ label:hover,
+    .rating > input:checked ~ label:hover ~ label,
+    .rating > label:hover ~ input:checked ~ label {
+    fill: #e58e09;
+    }
+
+    .rating:not(:checked) > label:hover,
+    .rating:not(:checked) > label:hover ~ label {
+    fill: #ff9e0b;
+    }
+
+    .rating > input:checked ~ label > svg {
+    fill: var(--color-bento-mirabelle-yellow); /* Set color for selected stars */
+    }
+
+}
+
+.item-3{
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-bento-lila);
+    overflow: hidden;
+    padding: 10px;
+    grid-area: item3;
+    img{
+        align-self: flex-start;
+        margin: 5px 0px 5px 10px;
+    }
+    h2{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    p{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}
+
+.item-4{
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-bento-mirabelle-yellow);
+    padding: 10px;
+    grid-area: item4;
+    h1{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
+
+.item-5{
+    flex-direction: column;
+    padding: 10px;
+    p{
+        width:60%;
+    }
+    background-color: var(--color-bento-ivory);
+    grid-area: item5;
+}
+
+.item-6{
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--color-bento-mirabelle-yellow);
+    overflow: hidden;
+    p{
+        font-size: 18px;
+    }
+    img{
+        align-self:flex-start;
+    }
+    grid-area: item6;
+}
+
+.item-7{
+    flex-direction: column;
+    padding: 10px;
+    text-align: start;
+    h1{
+        font-size: 32px;
+    }
+    img{
+        margin-top: 15px;
+        align-self: center;
+    }
+    background-color: var(--color-bento-ivory);
+    grid-area: item7;
+}
+
+.item-8{
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: var(--color-bento-purple);
+    color: #ffffff;
+    h1{
+        font-size: 20px;
+    }
+    grid-area: item8;
+}
+
+@media (max-width: 768px) { 
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto); 
+    grid-template-areas: 
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6"
+      "item7"
+      "item8";
+    height: auto;
+    width: 100%; 
+    padding: 15px; 
+  }
+  main {
+    height: auto; 
+    min-height: 100vh; 
+    padding: 20px; 
+    align-items: flex-start; 
+    overflow-y: auto;
+  }
+  .item-3>img{
+    align-self: center;
+    margin-left: 0px;
+    width: 60%;
+  }
+  .item-4{
+    justify-content: center;
+    img{
+        width: 60%;
+    }
+  }
+  .item-6{
+    justify-content: center;
+    img{
+        align-self: center;
+        width: 60%;
+    }
+  }
+  .item-7{
+    img{
+        width:60%;
+        height: auto;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <!--Modal-->
+    <dialog id="dialog">
+      <div class="modal-container">
+        <span>Transactions</span>
+        <div class="transactions-container">
+          <button id="close-modal" onclick="dialog.close()">Cerrar</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!--Balance-->
+    <div class="container">
+      <h2 class="title">Expense Tracker</h2>
+      <div class="balance">
+        <span>Your balance</span>
+        <h1 id="balance">$2,450.00</h1>
+        <div class="income-expenses">
+          <div class="income">
+            <span>Income</span>
+            <h2 id="income-text"></h2>
+          </div>
+          <div class="expense">
+            <span>Expenses</span>
+            <h2 id="expense-text"></h2>
+          </div>
+        </div>
+      </div>
+
+      <section class="transactions">
+        <!--Transactions (add with js)-->
+        <div class="button-container">
+          <button onclick="dialog.showModal()" id="show-transactions">
+            Show Transactions
+          </button>
+        </div>
+        <!--Add transaction-->
+        <div class="form-container">
+          <span>Add Transaction</span>
+          <form id="form" action="">
+            <label for="description">Description</label>
+            <input
+              type="text"
+              placeholder="Enter description..."
+              id="description"
+            />
+            <label for="amount">Amount</label>
+            <input type="number" placeholder="Enter amount..." id="amount" />
+            <small>Use negative [-] for expenses</small>
+            <button id="add-transaction" type="submit">Add Transaction</button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

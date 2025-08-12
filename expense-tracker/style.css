@@ -1,0 +1,347 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 5px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #979bdb;
+}
+
+/*Main container*/
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 95%;
+    height: 600px;
+    min-width: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+/*Main title*/
+.title{
+    margin-top: 10px;
+    padding: 2px;
+    border-bottom: solid 3px #575ec7;
+    border-top: solid 3px #9b2a6a;
+    border-radius: 5px;
+}
+/*Balance container*/
+.balance{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 72%;
+    margin: 5px;
+    background: #9b2a6a;
+    background: linear-gradient(90deg, #9b2a6a 0%, #575ec7 86%);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 5px;
+    min-width: 0;
+
+    h1{
+        font-size: 24px;
+    }
+
+    span{
+    font-size: 12px;
+    }
+}
+
+.income-expenses{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 5px;
+}
+
+.income, .expense{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    gap: 5px;
+    width: 80%;
+    background-color: #ffffff;
+}
+
+.income{
+    color: #379719;
+}
+.expense{
+    color: #cf3b3b;
+}
+.income, .expense{
+    span{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+
+/*Section with transactions and form*/
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 5px;
+}
+
+.transaction-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:blue;
+    min-width: 0;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(233, 239, 240);
+    width: 80%;
+    min-width: 0;
+    span{
+        font-weight: bold;
+        align-self:flex-start;
+        margin: 5px 0 0 10px;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+}
+
+input{
+    width: 90%;
+    height: 30px;
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #b9b9b9;
+}
+label{
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 5px 0 0 12px;
+}
+small{
+    color: rgb(87, 85, 85);
+    font-weight: 500;
+}
+
+/*Trasanctions container and button*/
+#add-transaction{
+    margin-top: 6px;
+    width: 92%;
+    height: 30px;
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    background-color: #575ec7;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 0;
+    background-color: rgb(233, 239, 240);
+}
+
+#show-transactions{
+    width: 100%;
+    height: 30px;
+    padding: px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9b2a6a;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/*Button hovers*/
+#show-transactions:hover{
+    background-color: #70194a;
+}
+
+#add-transaction:hover{
+    background-color: #3e4496;
+}
+
+/*Modal with transactions*/
+
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+}
+.modal-container>span{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.transactions-container{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    overflow: auto;
+}
+
+.transaction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 8px;
+    border-right: solid 3px #379719;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+}
+
+.transaction:hover{
+    transform: scale(1.05);
+}
+
+#dialog{
+   opacity: 0;
+    transition:
+        opacity 0.3s ease-out,
+        transform 0.3s ease-out;
+    transform: translate(-50%, -50%) scale(0.95);
+    will-change: transform, opacity;
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: min(80vw, 900px);
+    max-width: 90vw;
+    max-height: 100vh;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    padding: 10px;
+    background: white;
+    color: #333;
+}
+
+#dialog[open] {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    @starting-style {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+}
+
+#dialog[open]::backdrop {
+    opacity: 1;
+}
+
+#dialog:focus-visible {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+}
+
+/*Close button*/
+#close-modal{
+    padding: 10px 40px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #a5202b;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#close-modal:hover{
+    background-color: #771d25;
+}
+
+.column{
+    flex-direction: column-reverse;
+}
+
+
+@media (max-width: 432px){
+    .income-expenses{
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    label{
+        margin-left: 35px;
+    }
+    .title{
+        margin-bottom: 10px;
+    }
+    .form-container{
+        gap: 10px;
+    }
+    .container{
+        height: 550px;
+        width: 70%;
+    }
+
+    #add-transaction{
+        margin-top: 20px;
+    }
+    .form-container{
+        padding-bottom: 30px;
+    }
+}
