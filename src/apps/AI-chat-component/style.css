@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Cause", cursive;
+    color: #6d6d6d;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8e8e8;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:  #efefef;
+    box-shadow: 5px 5px 5px 5px #e4e4e4;
+    border-radius: 30px;
+    padding: 5px;
+    min-height: 40%;
+
+    p{
+        font-size: 18px;
+        font-weight: 400;
+
+        span{
+            color: #000000;
+            padding: 1px 5px;
+            background-color: #ecece9;
+            border-radius: 15px;
+        }
+    }
+}
+
+.container-first{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fafafa;
+    padding: 10px;
+    gap: 15px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    height: 100%;
+}
+
+.container-second{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.container-circles{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-two-options{
+    display: flex;
+    gap: 5px;
+}
+
+.add{
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.microphone{
+    background-color: #ffffff;
+    border: 0.5px solid #d8d8d8;
+    cursor: pointer;
+}
+
+.arrow-top{
+    background-color: #00eda0;
+    cursor: pointer;
+}
+
+.circle{
+    display: flex;
+    border-radius: 100%;
+    padding: 15px 16px;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+.option:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}

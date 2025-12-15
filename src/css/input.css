@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+.fc-toolbar-title{
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+.fc-day-today{
+    background-color: #fa4202 !important;
+    color: white;
+    font-weight: bold;
+}
+
+.fc-button-primary{
+    border: none !important;
+    background-color: #fa4202 !important;
+
+}
+
+#calendar{
+    font-weight: 400;
+}
